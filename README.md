@@ -19,7 +19,7 @@ Installation:
 	." and date < ".$enddate
 	." group by date"
 	." order by date"
-	."";	
+	."";
  $command = $connection->createCommand($sql);
  $rows = $command->queryAll();
  $strXML2 = "<graph caption='Downloads Broken down by date' formatNumberScale='0' decimalPrecision='0' >";
