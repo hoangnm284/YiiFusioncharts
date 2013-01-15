@@ -25,7 +25,7 @@ Installation:
  $strXML2 = "<graph caption='Downloads Broken down by date' formatNumberScale='0' decimalPrecision='0' >";
  $fusionChart2 = new FusionCharts;
  foreach ($rows as $row){
-	$strXML2 .= "<set name='".date('d/m/Y', $row['date']). "' value='".$row['downloads']."' color='" .FusionChartUtils::getFCColor($count++) . "'></set>";
+ 	$strXML2 .= "<set name='".date('d/m/Y', $row['date']). "' value='".$row['downloads']."' color='" .FusionChartUtils::getFCColor($count++) . "'></set>";
  }
  $strXML2 .= "</graph>";
  echo $fusionChart2->renderChart("/FusionCharts/FCF_Column3D.swf", "", $strXML2, "EAS_Downloads", 600, 400);
