@@ -1,7 +1,10 @@
 YiiFusioncharts
 ===============
 
-FusionCharts extension for Yii
+FusionCharts extension for Yii - using FusionCharts free
+
+Userful resources:
+- http://docs.fusioncharts.com/free/
 
 Installation:
 
