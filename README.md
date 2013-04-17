@@ -8,11 +8,21 @@ Installation:
 - copy FusionCharts folder to protected/Extentsion folder on Yii project
 - copy FusionCharts.js file to js folder
 - copy Charts folder to root directory
-- add 'application.extensions.FusionCharts.*' to import module in Yii config file.
-- add js file to the project by calling:
-  Yii::app()->clientScript->registerScriptFile("/js/FusionCharts.js", CClientScript::POS_HEAD );
+- add the code below  to import module in Yii config file.
+
+```php
+	'application.extensions.FusionCharts.*'
+```
+ 
+- add js file to the project by adding the code below in your view:
+
+```php
+	Yii::app()->clientScript->registerScriptFile("/js/FusionCharts.js", CClientScript::POS_HEAD );
+```  
+ 
 - example of using FusionChart:
 
+```php
   $sql = "SELECT date, sum(download) downloads"
 	." FROM `download`"
 	." where date >= ".$startdate
@@ -36,4 +46,4 @@ Installation:
  $strXML2 .= "</graph>";
  
  echo $fusionChart2->renderChart("/FusionCharts/FCF_Column3D.swf", "", $strXML2, "Downloads Graph", 600, 400);
-
+```
